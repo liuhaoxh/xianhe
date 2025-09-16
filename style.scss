@@ -287,3 +287,150 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+// 首页特色样式
+.main-content {
+  padding: 20px 0;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 60px 0;
+  background-color: $lightGray;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: $gray;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: $blue;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: $darkerGray;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: $blue;
+  border: 2px solid $blue;
+}
+
+.btn-secondary:hover {
+  background-color: $blue;
+  color: white;
+}
+
+.features-section,
+.solution-section,
+.development-section,
+.blog-preview {
+  margin-bottom: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: $blue;
+  margin-top: 0;
+}
+
+.solution-section ul,
+.development-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.solution-section li,
+.development-section li {
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.solution-section li:before,
+.development-section li:before {
+  content: "✓";
+  color: $blue;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.blog-preview .posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.blog-preview .post {
+  border: 1px solid $lightGray;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.posts-list h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.post-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $lightGray;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-meta {
+  color: $gray;
+  font-style: italic;
+  margin-bottom: 10px;
+}

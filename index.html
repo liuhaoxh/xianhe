@@ -2,17 +2,68 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+<div class="main-content">
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>{{ site.name }}</h1>
+      <p>{{ site.description }}</p>
+      <div class="hero-buttons">
+        <a href="{{ site.baseurl }}/about" class="btn btn-primary">了解更多</a>
+        <a href="{{ site.baseurl }}/posts" class="btn btn-secondary">查看文章</a>
       </div>
+    </div>
+  </header>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+  <section class="features-section">
+    <h2>项目特色</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>UGC地图内容</h3>
+        <p>由用户共同创建的点位和路线，打造个性化的地图体验</p>
+      </div>
+      <div class="feature-card">
+        <h3>多场景支持</h3>
+        <p>支持景区地图、游戏地图、展馆地图等多种场景</p>
+      </div>
+      <div class="feature-card">
+        <h3>全平台兼容</h3>
+        <p>支持Android、iOS、Web、Windows、macOS等多平台</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="solution-section">
+    <h2>解决痛点</h2>
+    <ul>
+      <li><strong>景区攻略问题</strong>：解决景区官方没有攻略，各大平台攻略散乱无序的问题</li>
+      <li><strong>游戏地图需求</strong>：为游戏行业提供制作和分享游戏地图的平台</li>
+      <li><strong>展馆导览优化</strong>：为展馆提供个性化的参观路线规划</li>
+    </ul>
+  </section>
+
+  <section class="development-section">
+    <h2>项目进展</h2>
+    <p>首期聚焦解决"攻略散乱"痛点，用最小成本上线2D版，已实现以下功能：</p>
+    <ul>
+      <li>支持展示点位地图（东三省+京津冀）</li>
+      <li>添加删除点位，评论点位、点赞评论功能</li>
+      <li>地图广场功能，如上海迪士尼地图</li>
+    </ul>
+    <p>后续将根据市场反馈，逐步开发3D/区块链模块及AR交互功能</p>
+  </section>
+
+  <section class="blog-preview">
+    <h2>最新文章</h2>
+    <div class="posts">
+      {% for post in site.posts limit:3 %}
+        <article class="post">
+          <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+          <div class="entry">
+            {{ post.excerpt }}
+          </div>
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">阅读全文</a>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
 </div>
